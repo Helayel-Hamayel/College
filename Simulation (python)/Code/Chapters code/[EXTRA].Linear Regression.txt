@@ -1,0 +1,23 @@
+#p358
+from matplotlib import pyplot as plt
+import numpy as np
+
+x = np.array([1.309, 1.471, 1.490, 1.565, 1.611, 1.680])
+x = x**3.5
+
+y = np.array([2.138, 3.421, 3.597, 4.340, 4.882, 5.660])
+
+n = x.shape[0]
+
+dnom = (n * np.sum(np.multiply(x,x)) - np.sum(x)**2)
+
+print(n)
+
+m = (n * np.sum(np.multiply(x, y)) - np.sum(x) * np.sum(y))/ dnom
+b = ((np.sum(np.multiply(x, x)) * np.sum(y)) - (np.sum(np.multiply(x, y)) * np.sum(x))) / dnom
+
+#func = m*(x) + b
+func = 0.98818*(x) -0.393131
+
+plt.scatter(x, y)
+plt.plot(x, func, 'r')

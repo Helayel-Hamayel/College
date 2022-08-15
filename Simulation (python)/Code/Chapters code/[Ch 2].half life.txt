@@ -1,0 +1,29 @@
+#== half life of radioactive P66
+
+from matplotlib import pyplot as plt
+import math
+
+p=1.00 # quantity
+r=(-0.000120968) #decay rate
+
+dt=0.01
+ti=5730
+
+n=int(ti/dt) # #o of years for to reach half life
+#5730 years it takes to reach the half life of radioactive
+
+pl=[]
+t=[]
+for i in range(n):
+    
+   # grw=r*p
+   # p=p+grw*dt
+
+    p=p*math.exp(r*dt)
+    
+    pl.append(p)
+    t.append(i*dt)
+
+    
+plt.plot(t,pl)
+print(p)

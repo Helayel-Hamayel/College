@@ -1,0 +1,24 @@
+#=The population increases throughout the years P64
+
+from matplotlib import pyplot as plt
+import math
+
+p=100
+r=0.1
+dt=0.01
+
+n=int(20/dt)
+
+pl=[]
+t=[]
+for i in range(n):
+
+    grw=r*p
+    p=p+grw*dt
+
+    pl.append(p)
+    t.append(i*dt)
+
+plt.xlim(0,20)
+plt.plot(t,pl)
+print(p)

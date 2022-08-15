@@ -1,0 +1,36 @@
+#bilogistic model for population
+from matplotlib import pyplot as plt
+import math
+
+p0 = 10000
+m1 = 20000
+m2 = 50000
+
+m = m1 + 1
+
+a = 0.2
+p = p0
+r = 0.1
+dt = 0.01
+n = int(100/dt)
+
+pt = []
+mt = []
+
+t = []
+
+for i in range(n):
+    grw1 = r * p*(1 - p/m)
+    grw2 = a*(m - m1)*(1 - (m - m1)/m2)
+    
+    p = p + grw1 * dt
+    m = m + grw2 * dt
+    
+    pt.append(p)
+    mt.append(m)
+    t.append(i*dt)
+    
+print(p)
+plt.plot(t, pt, 'r')
+plt.plot(t, mt, 'g')
+plt.show()

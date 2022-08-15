@@ -1,0 +1,45 @@
+from matplotlib import pyplot as plt
+
+p=2000 
+r=0.1
+m=1000
+dt=0.001
+
+N=int(100/dt)
+
+pl=[]
+t=[]
+
+for i in range(N):
+    
+    g=r*p*(1-(p/m))
+    p=p+(g*dt)
+
+    pl.append(p)
+    t.append(i*dt)
+    
+plt.plot(t,pl)
+
+===============
+
+from matplotlib import pyplot as plt
+
+p=20
+r=0.1
+m=1000
+dt=0.001
+
+N=int(100/dt)
+
+pl=[]
+t=[]
+
+for i in range(N):
+    
+    g=r*p*(1-(p/m))
+    p=p+(g*dt)
+
+    pl.append(p)
+    t.append(i*dt)
+    
+plt.plot(t,pl)

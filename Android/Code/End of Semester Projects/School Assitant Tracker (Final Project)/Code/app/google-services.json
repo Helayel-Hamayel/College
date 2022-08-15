@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1003683277767",
+    "firebase_url": "https://smarttrack-2597d.firebaseio.com",
+    "project_id": "smarttrack-2597d",
+    "storage_bucket": "smarttrack-2597d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1003683277767:android:9498a418b22fbc657687e2",
+        "android_client_info": {
+          "package_name": "com.example.Project_Freya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1003683277767-qc1ggcq1og1lop8oqov260mg4l2k70si.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAm8BJeJJ2KJd7OLsZKtEvGoK5w5bWtpn8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1003683277767-qc1ggcq1og1lop8oqov260mg4l2k70si.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

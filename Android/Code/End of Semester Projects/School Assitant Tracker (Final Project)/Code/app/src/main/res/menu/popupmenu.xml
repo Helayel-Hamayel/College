@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/about"
+        android:icon="@drawable/ic_about"
+        android:title="about"
+        />
+
+    <item
+        android:id="@+id/Guide"
+        android:icon="@drawable/ic_guide"
+        android:title="Guide"
+       />
+
+    <item
+        android:id="@+id/Assigned_Bus"
+        android:icon="@drawable/ic_bus"
+        android:title="Your assigned bus/es"
+        />
+
+
+    <item
+        android:id="@+id/Settings"
+        android:icon="@drawable/ic_settings"
+        android:title="Settings"
+        />
+
+    <item
+        android:id="@+id/logout_butt"
+        android:icon="@mipmap/ic_logout"
+        android:title="logout"
+        />
+
+    <item
+        android:id="@+id/Shutdown"
+        android:icon="@mipmap/ic_shutdown"
+        android:title="Shutdown"
+        />
+
+</menu>

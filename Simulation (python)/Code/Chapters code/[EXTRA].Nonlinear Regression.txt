@@ -1,0 +1,16 @@
+#x**2 nonlinear 
+xsqr = np.multiply(xs, xs)
+n = xs.shape[0]
+
+dnom = (n * np.sum(np.multiply(xsqr,xsqr)) - np.sum(xsqr)**2)
+print(n)
+
+m = (n * np.sum(np.multiply(xsqr, ys)) - np.sum(xsqr) * np.sum(ys))/ dnom
+b = ((np.sum(np.multiply(xsqr, xsqr)) * np.sum(ys)) - (np.sum(np.multiply(xsqr, ys)) * np.sum(xsqr))) / dnom
+realYs = xsqr*m + b
+
+x=np.arange(0,3,0.1)
+func=m*x**2+b
+
+plt.scatter(xs, ys)
+plt.plot(x,func, 'g')

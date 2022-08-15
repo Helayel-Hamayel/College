@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Word finder</title>
+ <meta charset="UTF-8">
+ <link rel="stylesheet" type="text/css" href="style.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ </head>
+ 
+ <script src="script.js">
+ </script>
+ 
+ 
+<body>
+
+
+<div class="container">
+
+    <div class="block item1">
+	<h2 style="margin-top: 10px;margin-bottom: 10px;margin-left: 10px;">Input :</h2>
+	<textarea id="input" style="resize: none;width: 95%;margin-left: 2.5%;margin-right: 2.5%;margin-bottom: 2.5%;" name="paragraph_text" cols="75%" rows="10%" placeholder="Copy and paste a text here..."></textarea>
+	
+	</div>
+    
+	<div class="block item5">
+	<h2 style="margin-top: 10px;margin-bottom: 10px;margin-left: 10px;">Output :</h2>
+	
+	<div id="output" style="margin-left: 2.5%;margin-right: 2.5%;margin-bottom: 2.5%;" width="75%" height="10%">
+    
+	</div>
+	
+    </div>
+	
+	<!-- <mark>deadman</mark> -->
+	
+	<div class="block">
+	<h2 style="margin-top: 10px;margin-bottom: 10px;margin-left: 10px;">Styling a paragraph :</h2>
+	
+	<form>
+	
+	 <span style="margin-left: 2.5%;">Text color :</span>
+	 <input id="T_color" type="color" name="favcolor" value="#ff0000"><br><br>
+ 
+     <span style="margin-left: 2.5%;">Background color :</span>
+	 <input id="Bg_color" type="color" name="favcolor" value="#000000"><br><br>
+	
+
+    <input id="B" style="margin-left: 2.5%;" type="radio" name="Border_ch" checked> Border<br>
+    <input id="B_Less" style="margin-left: 2.5%;" type="radio" name="Border_ch"> Borderless<br>
+	
+	
+	<span style="margin-left: 2.5%;">Border Style:</span> 
+	<select id="list_B">
+     <option value="1" selected>Solid</option>
+     <option value="2">Dashed</option>
+     <option value="3">Dotted</option>
+   </select>
+	
+	 <span style="margin-left: 2.5%;">Border color:</span>
+	 <input id="color_B" type="color" value="#d02f98"><br><br>
+ 
+	<button onclick="getTheOutput()" style="margin-left: 10%;margin-bottom: 0.5%;" type="button">Create the styled paragraph</button>
+    </form>
+	</div>
+	
+    <div  class="block">
+	<form>
+	
+	<h2 style="margin-top: 10px;margin-bottom: 10px;margin-left: 10px; ">Searching for a text :</h2>
+	
+	
+	<span style="margin-left: 2.5%;">Search for a word:</span>
+    <input id="inputWord" type="text" name="word" placeholder="input...">
+	
+	<button type="button" onclick="getTheLocation()" >Search</button>
+	<button type="button" onclick="clearTheHightlight()" >Clear Search</button>
+	
+	</form>
+	<br>
+	<span style="margin-left: 2.5%;">Note : <span id="outo">none </span></span>
+	
+	</div>
+
+</div>
+
+</body>
+</html>

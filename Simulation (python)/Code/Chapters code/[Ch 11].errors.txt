@@ -1,0 +1,11 @@
+import math
+#errors
+x = math.sqrt(2)
+print(x**2)
+
+#overflow
+print(6**29999999)
+
+#underflow
+print(10**-50)
+#WARNING IT TAKES TOO LOOONG TO PROCESS

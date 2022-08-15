@@ -1,0 +1,33 @@
+#=drug_in_system p86
+
+from matplotlib import pyplot as plt
+import math
+
+a=100*1000*0.12 # aspirin_in_plasma
+v=3000 # plasma_volume 
+
+aplus=100*1000*0.12 # CONSTANT aspirin_in_plasma
+TTD=8 #Time to take drug
+
+K=-math.log(0.5)/22  #elimination constant
+dt=0.01
+
+n=int(24*7/dt)
+
+time=[]
+pl=[]
+
+for i in range(n):
+    
+    if (i*dt%TTD == 0):
+        a=a+aplus
+        
+    elemination = -K*a*dt
+    a=a+elemination
+    plasma_concentration = a/v    
+
+    pl.append(plasma_concentration)
+    time.append(i*dt)
+    
+plt.xlim(0,168)    
+plt.plot(time,pl)

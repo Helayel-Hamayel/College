@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="25dp"
+    android:id="@+id/Main"><![CDATA[
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    ]]>
+
+    <ImageButton
+        android:id="@+id/reloc_gps"
+        android:layout_width="57sp"
+        android:layout_height="57sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/reloc_school"
+        android:adjustViewBounds="true"
+        android:background="@drawable/button_states"
+        android:padding="7dp"
+        android:scaleType="fitXY"
+        android:textSize="0sp"
+        android:tooltipText="Your location"
+        app:srcCompat="@drawable/ic_gps" />
+
+    <ImageButton
+        android:id="@+id/popUpMenu"
+        android:layout_width="57sp"
+        android:layout_height="57sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8sp"
+        android:layout_marginEnd="8sp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/button_states"
+        android:scaleType="fitXY"
+        android:textSize="0sp"
+        android:tooltipText="Menu"
+        app:srcCompat="@mipmap/ic_menu" />
+
+    <ImageButton
+        android:padding="10dp"
+        app:srcCompat="@mipmap/ic_school"
+        android:id="@+id/reloc_school"
+        android:layout_width="57sp"
+        android:layout_height="57sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="8sp"
+        android:layout_toEndOf="@+id/reloc_home"
+        android:adjustViewBounds="true"
+        android:background="@drawable/button_states"
+        android:drawableStart="@mipmap/ic_school"
+        android:scaleType="fitXY"
+        android:textSize="0sp"
+        android:tooltipText="School" />
+
+    <ImageButton
+        android:padding="10dp"
+        app:srcCompat="@mipmap/ic_home"
+        android:id="@+id/reloc_home"
+        android:layout_width="57sp"
+        android:layout_height="57sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8sp"
+        android:background="@drawable/button_states"
+        android:gravity="center"
+        android:textSize="0sp"
+        android:tooltipText="Home"
+        android:scaleType="fitXY" />
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/map_View"
+        android:layout_width="match_parent"
+        android:layout_height="515dp"
+        android:layout_below="@+id/divider5"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp" />
+
+    <ImageButton
+        android:padding="10sp"
+        app:srcCompat="@mipmap/ic_recall"
+        android:id="@+id/recall_school"
+        android:layout_width="57sp"
+        android:layout_height="57sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="61dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/button_states"
+        android:scaleType="fitXY"
+        android:textSize="0sp"
+        android:tooltipText="Recall" />
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="match_parent"
+        android:layout_height="12sp"
+        android:layout_below="@+id/reloc_home"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/DebugSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider5"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="29dp"
+        android:text="Send" />
+
+
+</RelativeLayout>

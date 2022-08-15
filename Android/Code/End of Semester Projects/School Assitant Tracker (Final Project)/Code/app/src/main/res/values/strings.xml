@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Tracker</string>
+    <string name="sending">Tracker</string>
+    <string name="block">Block</string>
+    <string name="logout">logout</string>
+
+    <string name="VersionAppABOUT">Version : v2020.19.07</string>
+
+    <string name="IgnoreMeBusDriver">Check this box to inform the bus driver to ignore your house, in case your child is not available to attend</string>
+
+</resources>

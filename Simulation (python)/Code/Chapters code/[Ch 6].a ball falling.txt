@@ -1,0 +1,42 @@
+#=falling ball form 400m p106
+
+from matplotlib import pyplot as plt
+
+dt=0.1 
+mass=0.5
+speed=0
+acc=-9.81 #acceleration due to gravity
+v=0 #velocity 
+t=15 #time in seconds
+
+weight=mass*acc  #F = M*A
+
+postion=400
+r=0.05 #radius
+projected_area= 3.14159 * r**2
+
+n=int(t/dt)
+
+T=[]
+P=[]
+S=[]
+
+for i in range(n):
+    
+    #air friction
+    air_fri=-0.65 * projected_area * v * abs(v) 
+    total_force=weight+air_fri
+    acc=total_force/mass # from fucntion a=F/m
+    
+    speed=abs(v)
+    
+    v=v+acc*dt
+    postion=postion+v*dt
+    
+    T.append(i*dt) # Time
+    P.append(postion/10)
+    S.append(speed)
+
+plt.xlim(0,15)    
+plt.plot(T,S)
+plt.plot(T,P)

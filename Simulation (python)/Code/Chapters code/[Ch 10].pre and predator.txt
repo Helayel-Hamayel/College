@@ -1,0 +1,72 @@
+#=pry and predator p160
+
+import matplotlib.pyplot as plt
+import math
+
+predator_population = 15 
+predator_birth_fraction = 0.01 
+predator_death_proportionality_constant = 1.06 
+prey_population = 100 
+prey_birth_fraction = 2 
+prey_death_proportionality_constant = 0.02 
+
+dt=0.001
+n=int(12/dt)
+
+pre=[]
+pry=[]
+t=[]
+
+for i in range(n):
+
+    predator_births = (predator_birth_fraction * prey_population) * predator_population 
+    predator_deaths = predator_death_proportionality_constant * predator_population 
+
+    prey_births = prey_birth_fraction * prey_population 
+    prey_deaths = (prey_death_proportionality_constant * predator_population) * prey_population
+    
+    predator_population= predator_population + (predator_births - predator_deaths)*(dt)
+    prey_population= prey_population + (prey_births - prey_deaths)*(dt)
+    
+    pre.append(predator_population)
+    pry.append(prey_population)
+    t.append((i*dt))
+    
+plt.plot(t,pre,'b')
+plt.plot(t,pry,'r--')
+
+-------------------------------
+
+import matplotlib.pyplot as plt
+import math
+
+predator_population = 15 
+predator_birth_fraction = 0.01 
+predator_death_proportionality_constant = 1.06 
+prey_population = 100 
+prey_birth_fraction = 2 
+prey_death_proportionality_constant = 0.02 
+
+dt=0.001
+n=int(12/dt)
+
+pre=[]
+pry=[]
+t=[]
+
+for i in range(n):
+
+    predator_births = (predator_birth_fraction * prey_population) * predator_population 
+    predator_deaths = predator_death_proportionality_constant * predator_population 
+
+    prey_births = prey_birth_fraction * prey_population 
+    prey_deaths = (prey_death_proportionality_constant * predator_population) * prey_population
+    
+    predator_population= predator_population + (predator_births - predator_deaths)*(dt)
+    prey_population= prey_population + (prey_births - prey_deaths)*(dt)
+    
+    pre.append(predator_population)
+    pry.append(prey_population)
+    t.append((i*dt))
+    
+plt.plot(pre,pry,'b')

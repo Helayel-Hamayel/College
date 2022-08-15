@@ -1,0 +1,40 @@
+#=p152
+
+import matplotlib.pyplot as plt
+import math
+
+BTS_population = 15 
+BTS_birth_fraction = 1 
+BTS_death_proportionality_constant = 0.20 
+
+WTS_population = 20 
+WTS_birth_fraction = 1 
+WTS_death_proportionality_constant = 0.27
+
+dt=0.01
+n=int(500)
+
+bts=[]
+wts=[]
+t=[]
+
+for i in range(n):
+
+    BTS_births = BTS_birth_fraction * BTS_population 
+    BTS_deaths = (BTS_death_proportionality_constant * WTS_population) * BTS_population 
+    
+    WTS_births = WTS_population * WTS_birth_fraction 
+    WTS_deaths = (WTS_death_proportionality_constant * BTS_population) * WTS_population   
+    
+    
+    WTS_population= WTS_population + (WTS_births-WTS_deaths)*(dt)
+    BTS_population= BTS_population + (BTS_births-BTS_deaths)*(dt)
+    
+    bts.append(BTS_population)
+    wts.append(WTS_population)
+    t.append(i*dt)
+    
+plt.xlim(0,5)    
+plt.plot(t,bts)
+plt.plot(t,wts)
+

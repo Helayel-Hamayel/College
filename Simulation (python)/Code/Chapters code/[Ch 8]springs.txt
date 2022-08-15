@@ -1,0 +1,45 @@
+#=Springs p123
+
+import matplotlib.pyplot as plt
+import math
+
+a=9.81 # acceleration_due_to_gravity
+mass=80 
+weight = a * mass  
+K=6  # spring_constant
+unweighted_length = 30
+length = 0
+velocity = 5
+projected_area = 0.1
+dt=0.01
+
+t=60
+n=int(t/dt) 
+
+L=[]
+V=[]
+T=[]
+                  
+for i in range(n):
+    
+    if (length > unweighted_length):
+        restoring_spring_force = - K * (length - unweighted_length)
+    else:
+        restoring_spring_force = 0
+        
+    air_friction = -0.65 * projected_area * velocity * abs(velocity)
+    total_force = restoring_spring_force + weight + air_friction   
+                  
+    acceleration = total_force/mass  
+    
+    length = length + (velocity * dt)
+    velocity = velocity + (acceleration*dt) 
+    
+    V.append(velocity)
+    L.append(length)
+    T.append(i*dt)
+   
+plt.xlim(0,t)
+plt.plot(T,L) 
+plt.plot(T,V)                   
+ 

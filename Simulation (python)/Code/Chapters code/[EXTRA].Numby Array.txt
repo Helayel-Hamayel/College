@@ -1,0 +1,13 @@
+import numpy as np
+a = np.array([1, 2, 3]) #rank 1 array
+print(type(a)," type")
+print(a.shape," shape")
+print(a[0], a[1], a[2]," cells")
+a[0] = 5
+print(a," insert at cell 0 and print")
+
+b = np.array([[1, 2, 3], [4, 5, 6]])
+print(b.shape," b's shape at cell 1")
+print(b.shape[1]," shape at cell 1")
+print(b[0, 0], b[0, 1], b[1, 0])
+print(b)

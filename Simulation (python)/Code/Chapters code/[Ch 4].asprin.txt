@@ -1,0 +1,30 @@
+#=aspirin p84
+
+from matplotlib import pyplot as plt
+import math
+
+a=325*2*1000 # aspirin_in_plasma
+v=3000     # plasma_volume
+
+K=-math.log(0.5)/3.2 #elimination constant
+dt=0.01
+
+time=[]
+pl=[]
+
+t=8
+n=int(t/dt)
+
+for i in range(n):
+    
+    elemination=-K*a*dt
+    a=a+elemination
+    plasma_concentration = a/v
+
+    pl.append(plasma_concentration)
+    time.append(i*dt)   
+
+plt.xlim(0,8)
+plt.plot(time,pl)
+
+print(elemination)

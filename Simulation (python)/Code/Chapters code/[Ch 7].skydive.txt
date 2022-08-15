@@ -1,0 +1,48 @@
+#=skydiving fall and open at 1km p109
+
+from matplotlib import pyplot as plt
+
+dt=0.01 
+mass=90
+speed=6.96
+acc=-9.81 #acceleration due to gravity
+v=0 #velocity
+weight=mass*acc  #F = M*A
+postion=2000
+postion_open=1000
+r=0.05 #radius
+projected_area= 3.14159 * r**2
+
+t=40 #time in seconds
+n=int(t/dt)
+
+T=[]
+P=[]
+S=[]
+
+for i in range(n):
+    
+    #air friction
+    air_fri=-0.65 * projected_area * v * abs(v) 
+    total_force=weight+air_fri
+    acc=total_force/mass # from fucntion a=F/m
+    
+    dv=acc #delta (change in)  velocity 
+    dp=v #delta (change in) position
+    
+    v=v+(dv)*dt
+    postion=postion+dp*dt
+    speed=abs(v)
+    
+    if (postion > postion_open) :
+        projected_area=0.4
+    else :
+        projected_area=28
+    
+    T.append(i*dt) # Time
+    P.append(postion)
+    S.append(speed*32)
+
+plt.xlim(0,40)    
+plt.plot(T,S)
+plt.plot(T,P)

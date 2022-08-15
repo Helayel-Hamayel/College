@@ -1,0 +1,29 @@
+patches-own [temp]
+
+to setup
+  clear-all
+  ask patches [set temp random 100]
+  ask patches [set pcolor temp / 10]
+  ;ask patches [set pcolor temp] ;use with diffuse
+  
+  reset-ticks
+end
+
+to go
+  ;ask patches [set temp 0.125 * sum [temp] of neighbors]
+  diffuse temp 0.5
+  ask patches [
+    if pxcor = 0 and pycor < 16 and pycor > 10 [
+      set temp source
+    ]
+  ]
+ask patches [
+  if pxcor = 32 and pycor < 16 and pycor > 10 [
+    set temp -1 * source
+  ]
+]
+  ask patches [set pcolor temp / 5]
+  ;ask patches [set pcolor temp] ;use with diffuse
+end
+
+
