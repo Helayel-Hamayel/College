@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <item
+            android:id="@+id/Bi"
+            android:orderInCategory="0"
+            android:title="Binary"
+            android:icon="@drawable/ic_bi"
+            app:showAsAction="never"/>
+
+        <item
+            android:id="@+id/Octo"
+            android:orderInCategory="1"
+            android:title="Octal"
+            android:icon="@drawable/ic_oct"
+            app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/Deca"
+        android:orderInCategory="2"
+        android:title="Decimal"
+        android:icon="@drawable/ic_dec"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/Hexa"
+        android:orderInCategory="3"
+        android:title="Hexa"
+        android:icon="@drawable/ic_hex"
+        app:showAsAction="never"/>
+
+    </menu>
+

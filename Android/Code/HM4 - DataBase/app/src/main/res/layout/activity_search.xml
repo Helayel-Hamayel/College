@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Search">
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="{ Search by Info }"
+        android:textColor="#2962FF"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/RG1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        android:layout_marginTop="12dp"
+        android:background="@color/background"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+
+        <RadioButton
+            android:id="@+id/rbID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="ID" />
+
+        <RadioButton
+            android:id="@+id/rbTitle"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Title" />
+
+        <RadioButton
+            android:id="@+id/rbLang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Language" />
+
+        <RadioButton
+            android:id="@+id/rbCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cost" />
+
+        <RadioButton
+            android:id="@+id/rbLen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Length" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/srchID"
+        android:layout_width="169dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="ID"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RG1" />
+
+    <EditText
+        android:id="@+id/srchTitle"
+        android:layout_width="169dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+
+        android:hint="Title"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/srchID" />
+
+    <EditText
+        android:id="@+id/srchLang"
+        android:layout_width="169dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Language"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/srchTitle" />
+
+    <EditText
+        android:id="@+id/srchCost"
+        android:layout_width="169dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Cost"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/srchLang" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="238dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@+id/cbCE"
+        app:layout_constraintTop_toBottomOf="@+id/srchCost">
+
+        <CheckBox
+            android:id="@+id/cbCLT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Less Than" />
+
+        <CheckBox
+            android:id="@+id/cbCGT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Greater Than" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/srchLen"
+        android:layout_width="169dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Length (in minuts)"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/srchCost" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="238dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@+id/cbLE"
+        app:layout_constraintTop_toBottomOf="@+id/srchLen">
+
+        <CheckBox
+            android:id="@+id/cbLLT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Less Than" />
+
+        <CheckBox
+            android:id="@+id/cbLGT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Greater Than" />
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/cbCE"
+        android:layout_width="93dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="Equal To"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/srchCost" />
+
+    <CheckBox
+        android:id="@+id/cbLE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+
+        android:text="Equal To"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/srchLen" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="95dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RG1" />
+
+    <Button
+        android:id="@+id/Srchbutt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="40dp"
+        android:text="Search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RG1" />
+
+    <ScrollView
+        android:id="@+id/SV"
+        android:layout_width="match_parent"
+        android:layout_height="358dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2">
+
+        <TextView
+            android:id="@+id/RS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

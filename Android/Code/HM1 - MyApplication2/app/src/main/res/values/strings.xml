@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name"> Number Tester </string>
+    <string name="ITI"> Insert The Input :</string>
+    <string name="cal"> Calculate</string>
+    <string name="clr"> Clear</string>
+    <string name="wfi"> waiting for Input. . .</string>
+    <string name="tac"> Toggle Auto-Calculation</string>
+    <string name="res"> The Results :</string>
+    <string name="PRM"> Prime :</string>
+    <string name="TPRM"> Twin Prime :</string>
+    <string name="ToggleText"> Toggle this option to turn \n Auto-Calculation Off/On :</string>
+    <string name="pal"> Palindrome :</string>
+    <string name="dots">. . . . . . . .</string>
+    <string name="iai">insert an integer</string>
+    <string name="Yes">. . .(YES). . .</string>
+    <string name="No">. . . (NO). . .</string>
+</resources>
