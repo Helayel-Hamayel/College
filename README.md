@@ -1,3 +1,5 @@
 # College
-This repo contains most of my Projects and Homeworks, except C++ 1 and C++ 2 Courses, 
-both were in harddisk that had critical malfaulction thus unable to retrieve the files.
+
+Coursework, projects and assignments from my B.Sc. in Computer Science at An-Najah National University (2016–2021).
+
+Mostly Java, plus web (HTML, CSS, JavaScript), Assembly and NetLogo.
